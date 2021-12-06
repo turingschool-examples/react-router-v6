@@ -1,0 +1,29 @@
+.img-container {
+  width: 100%;
+  display: flex;
+}
+
+.app-img-no-hover {
+  width: 30%;
+  height: 300px;
+  margin: 0px 5px;
+  border-radius: 5px
+}
+
+ .creature-bio {
+  width: 75%;
+  margin: 20px auto;
+}
+
+.back-btn {
+  display: block;
+  margin: 10px auto;
+}
+
+.back-btn:visited {
+  text-decoration: none;
+}
+
+.back-btn:hover {
+  color: #A4D555;
+}
