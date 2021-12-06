@@ -15,11 +15,11 @@ const Creatures = () => {
    });
 
    return (
-     <>
-       <h1>{creatureType}!</h1>
+     <div>
        <Outlet />
+       <h1>{creatureType}!</h1>
        {creatureImages}
-     </>
+     </div>
    )
 }
 
