@@ -1,10 +1,10 @@
 import './Creatures.css';
 
-const Creatures = () => {
+const Creatures = ({ creatureType }) => {
 
   return (
     <div>
-      <h1>Creatures!</h1>
+      <h1>{`${creatureType.toUpperCase()}!`}</h1>
     </div>
   )
 }
