@@ -1,5 +1,4 @@
 import './App.css';
-import CreatureDetails from '../CreatureDetails/CreatureDetails';
 
 function App() {
   return (
