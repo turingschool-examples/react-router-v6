@@ -1,10 +1,10 @@
 import React from 'react';
 import './CreatureDetails.css';
 
-const CreatureDetails = () => {
+const CreatureDetails = ({ creatureType, creatureId }) => {
   return (
     <div>
-      <h1>Creature details!</h1>
+      <h1>{`${creatureType.toUpperCase()}: ${creatureId}`}</h1>
     </div>
   )
 }
