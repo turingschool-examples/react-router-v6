@@ -2,6 +2,7 @@ import './App.css';
 import { Routes, Route, NavLink } from 'react-router-dom';
 import Home from '../Home/Home';
 import Creatures from '../Creatures/Creatures';
+import CreatureDetails from '../CreatureDetails/CreatureDetails';
 
 function App() {
   return (
@@ -13,7 +14,9 @@ function App() {
       <h1>Puppies or Sharks?</h1>
       <Routes>
         <Route path="/" element={<Home />}/>
-        <Route path="/puppies" element={<Creatures creatureType='puppies'/>} />
+        <Route path="/:animal" element={<Creatures />}>
+          <Route path=":id" element={<CreatureDetails />}/>
+        </Route>
       </Routes>
     </main>
   );

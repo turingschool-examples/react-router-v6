@@ -1,12 +1,26 @@
 import './Creatures.css';
+import { getCreaturesData } from '../../data/animalData';
+import { useParams, Link, Outlet } from 'react-router-dom';
 
-const Creatures = ({ creatureType }) => {
+const Creatures = () => {
+  const creatureType = useParams().animal;
 
-  return (
-    <div>
-      <h1>{`${creatureType.toUpperCase()}!`}</h1>
-    </div>
-  )
+  const creatureImages = getCreaturesData(creatureType).map(creature => {
+    const { id, image } = creature;
+    return (
+      <Link to={`/${creatureType}/${id}`}>
+        <img src={image} key={id} id={id} className="app-img"/>
+      </Link>
+     )
+   });
+
+   return (
+     <>
+       <h1>{creatureType}!</h1>
+       <Outlet />
+       {creatureImages}
+     </>
+   )
 }
 
 export default Creatures;

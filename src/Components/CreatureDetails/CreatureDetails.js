@@ -4,7 +4,7 @@ import './CreatureDetails.css';
 const CreatureDetails = () => {
   return (
     <div>
-      <h1>Creature details!</h1>
+      <h1>Creature Details!</h1>
     </div>
   )
 }
